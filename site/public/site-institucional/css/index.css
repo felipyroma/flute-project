@@ -1,10 +1,7 @@
 * {
     padding: 0;
     margin: 0;
-}
-
-body {
-    background-color: #CBCCD4;
+    font-family: 'Fredoka', sans-serif;
 }
 
 /* navbar */
@@ -14,7 +11,6 @@ body {
     padding-top: 0.5%;
     position: fixed;
     width: 100%;
-    z-index: 100000;
 }
 
 .container {
@@ -46,10 +42,11 @@ a {
     font-size: 20px;
 }
 
-/* banner, title */
 
+
+/* banner, title */
 .banner {
-    background-image: url(../images/banner.jpg);
+    background-image: linear-gradient(0deg, #CBCCD4 10%, transparent 30%), url(../images/banner1.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     height: 600px;
@@ -61,37 +58,65 @@ a {
     /* border: red 3px solid; */
 }
 
-
 .title {
+    display: flex;
     padding-top: 15%;
-    font-size: 50px;
+    width: 100%;
     color: white;
     /* border: red 3px solid; */
-    width: 100%;
 }
 
 .title_text {
+    width: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    /* border: solid 3px black; */
-
 }
 
-.title_text img{
-    /* border: solid 3px blue; */
+.title_text h1 {
+    font-size: 100px;
+}
+
+.title_text img {
+    width: 25%;
+}
+
+/* sobre */
+.sobre {
+    background-color: #CBCCD4;
+}
+
+.sobre .container img {
     width: 30%;
+}
+
+.sobre .container {
     display: flex;
+    justify-content: space-;
+    /* border: 3px solid blue; */
 }
 
-.title_text h1{
-    text-shadow: 2px 2px 7px black;
+.align {
+    /* border: solid 3px yellow; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.waves {
-    position: absolute;
-    bottom: 4%;
-    width: 100%;
+.sobre_text {
+    /* border: solid 3px red; */
+    width: 80%;
+    text-align: justify;
 }
 
+.sobre_text p {
+    text-indent: 1em;
+    font-size: 20px;
+}
+
+.sobre_text h1 {
+    text-align: center;
+    font-size: 45px;
+    font-weight: 900;
+    text-shadow: 2px 2px 6px black;
+}
