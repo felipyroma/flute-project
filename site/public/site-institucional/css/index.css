@@ -11,6 +11,7 @@
     padding-top: 0.5%;
     position: fixed;
     width: 100%;
+    z-index: 100000000000000000;
 }
 
 .container {
@@ -40,13 +41,19 @@ a {
     text-decoration: none;
     color: white;
     font-size: 20px;
+    font-family: 'Fredoka One', cursive;
+}
+
+a:hover {
+    color: #A7AAB2;
+    transition: 0.3s;
 }
 
 
 
 /* banner, title */
 .banner {
-    background-image: linear-gradient(0deg, #CBCCD4 10%, transparent 30%), url(../images/banner1.jpg);
+    background-image: linear-gradient(0deg, #CBCCD4 3%, transparent 30%), url(../images/banner.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     height: 600px;
@@ -74,27 +81,31 @@ a {
 }
 
 .title_text h1 {
+    font-family: 'Fredoka One', cursive;
     font-size: 100px;
+    font-weight: 900;
 }
 
 .title_text img {
-    width: 25%;
+    width: 20%;
 }
 
-/* sobre */
-.sobre {
+
+/* about */
+.about {
     background-color: #CBCCD4;
+    padding-top: 5%;
+    padding-bottom: 10%;
 }
 
-.sobre .container img {
-    width: 30%;
+.about .container img {
+    width: 45%;
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
 }
 
-.sobre .container {
-    display: flex;
-    justify-content: space-;
-    /* border: 3px solid blue; */
-}
+/* .about .container {
+    border: solid 3px blue;
+} */
 
 .align {
     /* border: solid 3px yellow; */
@@ -103,20 +114,177 @@ a {
     align-items: center;
 }
 
-.sobre_text {
+.about_text {
     /* border: solid 3px red; */
-    width: 80%;
+    width: 95%;
+    margin-left: 5%;
     text-align: justify;
 }
 
-.sobre_text p {
+.about_text p {
     text-indent: 1em;
     font-size: 20px;
 }
 
-.sobre_text h1 {
+.about_text h1 {
+    font-family: 'Fredoka One', cursive;
     text-align: center;
-    font-size: 45px;
+    font-size: 48px;
     font-weight: 900;
-    text-shadow: 2px 2px 6px black;
+    margin-bottom: 20px;
+    text-shadow: 4px 6px 0px rgba(0, 0, 0, 0.2);
+}
+
+
+
+/* why */
+.why {
+    background-color: #CBCCD4;
+}
+
+.why .container {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 5%;
+    /* border: solid red 3px; */
+}
+
+.why_align {
+    display: flex;
+    flex-direction: row;
+    /* border: solid 3px red; */
+}
+
+.why_title {
+    display: flex;
+    justify-content: left !important;
+    color: white;
+    margin-bottom: 2%;
+    /* border: solid 3px red;    */
+    width: 100%;
+
+}
+
+.why_title h1 {
+    font-family: 'Fredoka One', cursive;
+    background-color: #7B7676;
+    padding: 0.3em;
+    border-radius: 25px;
+    font-size: 45px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #7B7676;
+    width: 33.3333333333%;
+    padding: 1.5em;
+    margin: 1%;
+    border-radius: 20px;
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+}
+
+.content:hover {
+    transform: scale(1.05);
+    transition: 1s;
+}
+
+.relato_text {
+    text-indent: 1em;
+    text-align: justify;
+    font-size: 18px;
+    color: white;
+    background-color: #CBCCD4;
+    padding: 0.5em;
+    border-radius: 20px;
+    color: black;
+}
+
+/* .content img {
+    border-radius: 100% 100%;
+} */
+
+.content_align {
+    display: flex;
+    margin-bottom: 5%;
+}
+
+.text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: white;
+}
+
+.text h1 {
+    font-size: 20px;
+    font-family: 'Fredoka One', cursive;
+    font-weight: 200;
+
+}
+
+.relato {
+    width: 30%;
+    margin-right: 5%;
+}
+
+/* meu relato */
+.my_relato {
+    background-color: #CBCCD4;
+    padding-bottom: 5%;
+}
+
+.my_relato_left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #7B7676;
+    margin: 2%;
+    padding: 1.5em;
+    border-radius: 20px;
+    color: white;  
+}
+
+.my_relato_left img {
+    width: 15em;
+}
+
+.my_relato_left h1 {
+    padding-top: 4%;
+    font-family: 'Fredoka One', cursive;
+    font-weight: 200;
+}
+.my_relato_left p {
+    font-size: 18px;
+}
+
+.my_relato_right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.3em;
+    font-size: 18px;
+    text-align: justify;
+    text-indent: 1em;
+    background-color: #A7AAB2;
+    padding: 1.5em;
+    border-radius: 20px;
+}
+
+/* carousel */
+.slide {
+    display: flex;
+    flex-flow: nowrap;
+}
+
+.slide img {
+    width: 50%;
+}
+
+.slide_text {
+    display: flex;
+    flex-direction: column;
 }
