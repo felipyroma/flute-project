@@ -103,9 +103,6 @@ a:hover {
     box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
 }
 
-/* .about .container {
-    border: solid 3px blue;
-} */
 
 .align {
     /* border: solid 3px yellow; */
@@ -145,7 +142,7 @@ a:hover {
 .why .container {
     display: flex;
     flex-direction: column;
-    padding-bottom: 5%;
+    padding-bottom: 2%;
     /* border: solid red 3px; */
 }
 
@@ -202,10 +199,6 @@ a:hover {
     color: black;
 }
 
-/* .content img {
-    border-radius: 100% 100%;
-} */
-
 .content_align {
     display: flex;
     margin-bottom: 5%;
@@ -229,6 +222,9 @@ a:hover {
     width: 30%;
     margin-right: 5%;
 }
+
+
+
 
 /* meu relato */
 .my_relato {
@@ -274,17 +270,97 @@ a:hover {
     border-radius: 20px;
 }
 
+
+
 /* carousel */
-.slide {
-    display: flex;
-    flex-flow: nowrap;
+.container-carousel {
+    width: 100%;
+    background-color: #A7AAB2;
+    padding-top: 2%;
+    padding-bottom: 4%;
 }
 
-.slide img {
-    width: 50%;
+.container-carousel h1{
+    font-family: 'Fredoka One', cursive;
+    text-align: center;
+    font-size: 50px;
+    text-shadow: 4px 6px 0px rgba(0, 0, 0, 0.2);
 }
 
-.slide_text {
+.container-slider {
     display: flex;
-    flex-direction: column;
+    width: 100%;
+    min-height: 80vh;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+
+}
+
+.container-images {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 70%;
+}
+
+.slider {
+    opacity: 0;
+    transition: opacity .2s;
+    position: absolute;
+    width: 100%;
+    border-radius: 20px;
+}
+
+.on {
+    opacity: 1;
+}
+
+#prev-button, #next-button {
+    width: 30px;
+    height: 30px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+#prev-button img, #next-button img {
+  width: 100%;
+  height: 100%;
+}
+
+#prev-button {
+    transform: rotate(180deg);
+}
+
+
+/* footer */
+
+.footer .container {
+    padding-top: 2%;
+    padding-bottom: 2%;
+    /* border: solid 3px red; */
+    justify-content: space-around;
+    align-items: center;
+}
+
+.footer .container h1{
+    font-family: 'Fredoka One', cursive;
+    font-size: 40px;
+    text-shadow: 4px 6px 0px rgba(0, 0, 0, 0.2);
+}
+
+.footer .container p{
+    font-size: 18px;
+}
+
+.contacts .icons {
+    display: flex;
+    justify-content: center;
+    margin-left: 2%;
+}
+
+.contacts i {
+    margin-left: 5%;
 }
