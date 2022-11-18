@@ -53,7 +53,7 @@ a:hover {
 
 /* banner, title */
 .banner {
-    background-image: linear-gradient(0deg, #CBCCD4 3%, transparent 30%), url(../images/banner.jpg);
+    background-image: linear-gradient(0deg, #CBCCD4 1%, transparent 40%), url(../images/banner.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     height: 600px;
@@ -168,7 +168,7 @@ a:hover {
     padding: 0.3em;
     border-radius: 25px;
     font-size: 45px;
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
+    text-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
 }
 
 .content {
@@ -229,7 +229,7 @@ a:hover {
 /* meu relato */
 .my_relato {
     background-color: #CBCCD4;
-    padding-bottom: 5%;
+    padding-bottom: 1.5%;
 }
 
 .my_relato_left {
@@ -242,6 +242,12 @@ a:hover {
     padding: 1.5em;
     border-radius: 20px;
     color: white;  
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+}
+
+.my_relato_left:hover {
+    transform: scale(1.05);
+    transition: 1s;
 }
 
 .my_relato_left img {
@@ -268,15 +274,23 @@ a:hover {
     background-color: #A7AAB2;
     padding: 1.5em;
     border-radius: 20px;
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
 }
 
+.my_relato_right:hover {
+    transform: scale(1.03);
+    transition: 1s;
+}
 
+/* waves */
+.waves {
+    background-color: #A7AAB2;
+}
 
 /* carousel */
 .container-carousel {
     width: 100%;
     background-color: #A7AAB2;
-    padding-top: 2%;
     padding-bottom: 4%;
 }
 
@@ -285,6 +299,8 @@ a:hover {
     text-align: center;
     font-size: 50px;
     text-shadow: 4px 6px 0px rgba(0, 0, 0, 0.2);
+    padding-bottom: 0.1%;
+    color: white;
 }
 
 .container-slider {
