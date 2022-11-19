@@ -1,176 +1,175 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="css/styleCadastro.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
 
-    <title>AquaTech | Cadastro</title>
-
-
-    <script src="./js/funcoes.js"></script>
-
-
-    <link rel="icon" href="./assets/icon/favicon2.ico">
-    <link rel="stylesheet" href="./css/style.css">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-        rel="stylesheet">
 </head>
 
 <body>
+    <div class="background">
+        <div class="header">
+            <div class="container">
+                <img class="logo" src="images/logo-flutebox.png" alt="">
 
-    <!--header inicio-->
-    <div class="header">
-        <div class="container">
-            <h1 class="titulo">AquaTech</h1>
-            <ul class="navbar">
-                <li>
-                    <a href="./index.html">
-                        Inicial
-                    </a>
-                </li>
-                <li>
-                    <a href="./simulador.html">Simulador</a>
-                </li>
-                <li>|</li>
-                <li>
-                    <a href="./login.html">Login</a>
-                </li>
-                <li class="agora">
-                    <a href="./cadastro.html">Cadastro</a>
-                </li>
-            </ul>
-        </div>
-    </div>
-    <!--header fim-->
-
-
-    <div class="banner ">
-        <div class="alerta_erro">
-            <div class="card_erro" id="cardErro">
-                <span id="mensagem_erro"></span>
-            </div>
-        </div>
-        <div class="container tamanho-conteudo">
-            <div class="card medio">
-                <h2>Bem-vindo!</h2>
-                <div class="formulario">
-
-                    <!--
-                         Para inserir mais um campo, copie uma das inputs abaixo.
-                         Assim que inserir vá para o script abaixo.
-                     -->
-
-                    <span class="tipo_campo">Nome:</span>
-                    <input id="nome_input" type="text" placeholder="Seu nome">
-
-                    <span class="tipo_campo">E-mail:</span>
-                    <input id="email_input" type="text" placeholder="meuemail@provedor.com">
-
-                    <span class="tipo_campo">Senha:</span>
-                    <input id="senha_input" type="password" placeholder="******">
-
-                    <span class="tipo_campo">Confirmação da Senha:</span>
-                    <input id="confirmacao_senha_input" type="password" placeholder="******">
-
-                    <button class="btn" onclick="cadastrar()">Cadastrar</button>
-
-                </div>
-                <div id="div_aguardar" class="loading-div">
-                    <img src="./assets/circle-loading.gif" id="loading-gif">
-                </div>
-
-                <div id="div_erros_login">
-
+                <div class="navbar">
+                    <li><a href="index.html">Início</a></li>
                 </div>
             </div>
         </div>
-    </div>
 
-    <!--footer inicio-->
-    <div class="footer">
-        <div class="container">
-            <h4>Feito com amor por um aluno &hearts; SPTech &copy; 2022
-                <br>
-                <span class="version">
-                    v1.0.0
-                </span>
-            </h4>
+
+        <div class="formulario_cadastro">
+            <div class="container">
+                <section>
+                    <div class="title">
+                        <h1>Flutebox</h1>
+                        <h2>Faça seu cadastro!</h2>
+                    </div>
+
+                    <div class="cadastro">
+                        <div class="identificador">
+                            <div class="identificador-align">
+                                <label for="iptNome"> Nome:</label>
+                                <input class="ipt-cadastro" id="iptNome" type="text" placeholder="Flutebox">
+                            </div>
+
+                            <div class="identificador-align">
+                                <label for="iptEmail" id="labelEmail"> E-mail:</label>
+                                <input class="ipt-cadastro" id="iptEmail" type="email" placeholder="exemplo@email.com">
+                            </div>
+                        </div>
+
+                        <div class="login">
+                            <label for="iptLogin"> Login:</label>
+                            <input class="ipt-cadastro" id="iptLogin" type="text" placeholder="FluteboxPlay">
+
+                            <label for="iptSenha">Senha:</label>
+                            <input class="ipt-cadastro" id="iptSenha" type="password" placeholder="********">
+
+                            <label for="iptConfSenha">Confirmar senha:</label>
+                            <input class="ipt-cadastro" id="iptConfSenha" type="password" placeholder="********">
+                        </div>
+
+                    </div>
+
+                    <button onclick="cadastro()">Cadastrar</button>
+
+                    <div class="outros">
+                        <p>Já tem uma conta? <a href="login.html">Faça login!</a></p>
+                    </div>
+
+                </section>
+
+            </div>
         </div>
-    </div>
-    <!--footer fim-->
-
 
 </body>
 
 </html>
 
 <script>
-    function cadastrar() {
-        aguardar();
+    var quantidade = 0
 
-        //Recupere o valor da nova input pelo nome do id
-        // Agora vá para o método fetch logo abaixo
-        var nomeVar = nome_input.value;
-        var emailVar = email_input.value;
-        var senhaVar = senha_input.value;
-        var confirmacaoSenhaVar = confirmacao_senha_input.value;
+    function cadastro() {
+        var nome = iptNome.value
+        var email = iptEmail.value
+        var login = iptLogin.value
+        var senha = iptSenha.value
+        var confSenha = iptConfSenha.value
 
-        if (nomeVar == "" || emailVar == "" || senhaVar == "" || confirmacaoSenhaVar == "") {
-            cardErro.style.display = "block"
-            mensagem_erro.innerHTML = "(Mensagem de erro para todos os campos em branco)";
-
-            finalizarAguardar();
-            return false;
+        if (nome == "") {
+            alert(`Por favor, insira um nome!`)
+            iptNome.style.border = 'solid 1px red';
         }
-        else {
-            setInterval(sumirMensagem, 5000)
+        else if (email == "") {
+            alert(`Por favor, inserir um email!`)
+            iptEmail.style.border = 'solid 1px red';
         }
+        else if (login == "") {
+            alert(`Por favor, inserir um login!`)
+            iptLogin.style.border = 'solid 1px red';
+        }
+        else if (senha == "") {
+            alert(`Por favor, inserir uma senha!`)
+            iptSenha.style.border = 'solid 1px red';
+        }
+        else if (senha != confSenha) {
+            alert('Senhas divergente')
+            senha_ipt.style.border = 'solid 1px red';
+            iptConfSenha.style.border = 'solid 1px red';
+        } else {
+            if (senha == confSenha) {
+                if (nome == "" || email == "" || login == "" || senha == "") {
+                    finalizarAguardar();
+                    return false;
+                }
 
-        // Enviando o valor da nova input
-        fetch("/usuarios/cadastrar", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify({
-                // crie um atributo que recebe o valor recuperado aqui
-                // Agora vá para o arquivo routes/usuario.js
-                nomeServer: nomeVar,
-                emailServer: emailVar,
-                senhaServer: senhaVar
-            })
-        }).then(function (resposta) {
+                // Enviando o valor da nova input
+                fetch("/usuarios/cadastrar", {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+                    body: JSON.stringify({
+                        // crie um atributo que recebe o valor recuperado aqui
+                        // Agora vá para o arquivo routes/usuario.js
+                        nomeServer: nome,
+                        emailServer: email,
+                        loginServer: login,
+                        senhaServer: senha,
+                    })
+                }).then(function (resposta) {
 
-            console.log("resposta: ", resposta);
+                    console.log("resposta: ", resposta);
 
-            if (resposta.ok) {
-                cardErro.style.display = "block";
+                    if (resposta.ok) {
+                        mensagem_erro.innerHTML = "Cadastro realizado com sucesso! Redirecionando para tela de Login...";
 
-                mensagem_erro.innerHTML = "Cadastro realizado com sucesso! Redirecionando para tela de Login...";
+                        setTimeout(function () {
+                            window.location = "../login.html";
+                        }, 1000); // apenas para exibir o loading
 
-                setTimeout(() => {
-                    window.location = "login.html";
-                }, "2000")
-                
-                limparFormulario();
-                finalizarAguardar();
+                        limparFormulario();
+                        finalizarAguardar();
+                    } else {
+                        throw ("Houve um erro ao tentar realizar o cadastro!");
+                    }
+                }).catch(function (resposta) {
+                    console.log(`#ERRO: ${resposta}`);
+
+                });
+
+                return false;
             } else {
-                throw ("Houve um erro ao tentar realizar o cadastro!");
+                alert('Senha errada')
             }
-        }).catch(function (resposta) {
-            console.log(`#ERRO: ${resposta}`);
-            finalizarAguardar();
-        });
 
-        return false;
+
+            sucess_cad.style.display = "block";
+            setTimeout(() => {
+                window.location = "../login.html";
+            }, "2000")
+        }
     }
 
-    function sumirMensagem() {
-        cardErro.style.display = "none"
+    function mudar() {
+        nome_ipt.style.border = '0';
+        login_ipt.style.border = '0';
+        senha_ipt.style.border = '0';
+        confSenha_ipt.style.border = '0';
     }
 
+
+    function limparFormulario() {
+        iptNome.value = ''
+        iptEmail.value = ''
+        iptLogin.value = ''
+        iptSenha.value = ''
+        iptConfSenha.value = ''
+    }
 </script>
