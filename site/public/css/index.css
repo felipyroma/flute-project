@@ -381,3 +381,18 @@ a:hover {
 .contacts i {
     margin-left: 5%;
 }
+
+
+
+.quiz {
+    background-color: #7B7676;
+}
+
+.quiz .container {
+    display: flex;
+    flex-direction: column;
+}
+
+#quiz_a {
+    display: none;
+}

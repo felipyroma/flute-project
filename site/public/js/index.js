@@ -41,3 +41,8 @@ console.log(slider)
 
 currentSlide = currentSlide + 1
 currentSlide = currentSlide - 1
+
+
+function logar() {
+    window.location = '../login.html'
+}
