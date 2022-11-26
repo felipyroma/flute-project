@@ -38,15 +38,17 @@
 
                         <div class="login">
                             <label for="email">Login:</label>
-                            <input class="ipt_login" id="input_login" type="email" placeholder="Flutebox">
+                            <input class="ipt_login" id="input_login" type="email" onkeyup="mudar()"
+                                placeholder="Flutebox">
                             <label for="senha">Senha:</label>
-                            <input class="ipt_login" id="input_senha" type="password" placeholder="********">
+                            <input class="ipt_login" id="input_senha" type="password" onkeyup="mudar()"
+                                placeholder="********">
                         </div>
 
                         <button onclick="entrar()">ENTRAR</button>
 
                         <div class="outros">
-                            <p>Ainda não tem uma conta? <a href="cadastro.html">Cadastre-se</a></p> 
+                            <p>Ainda não tem uma conta? <a href="cadastro.html">Cadastre-se</a></p>
                         </div>
                     </section>
                 </div>
@@ -56,6 +58,7 @@
 
 
 </body>
+<script src="js/index.js"></script>
 
 </html>
 
@@ -63,6 +66,15 @@
     function entrar() {
         var login = input_login.value;
         var senha = input_senha.value;
+
+        if (login == "") {
+            alert(`Por favor, inserir um login!`)
+            input_login.style.border = 'solid 1px red';
+        }
+        else if (senha == "") {
+            alert(`Por favor, inserir uma senha!`)
+            input_senha.style.border = 'solid 1px red';
+        }
 
         if (login == "" || senha == "") {
             return false;
@@ -95,9 +107,9 @@
                         sessionStorage.ID_USUARIO = json.id;
 
                         setTimeout(function () {
-                            window.location = "../index.html";
+                            window.location = "./interaction.html";
+                            quiz()
                         }, 1000); // apenas para exibir o loading
-
                     });
 
                 } else {
@@ -118,6 +130,11 @@
         }
 
 
+    }
+
+    function mudar() {
+        input_login.style.border = '';
+        input_senha.style.border = '';
     }
 
 </script>

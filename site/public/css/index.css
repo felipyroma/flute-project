@@ -83,7 +83,7 @@ a:hover {
 .title_text h1 {
     font-family: 'Fredoka One', cursive;
     font-size: 100px;
-    font-weight: 900;
+    font-weight: 600;
 }
 
 .title_text img {
@@ -101,6 +101,7 @@ a:hover {
 .about .container img {
     width: 45%;
     box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+    border-radius: 20px;
 }
 
 
@@ -127,9 +128,10 @@ a:hover {
     font-family: 'Fredoka One', cursive;
     text-align: center;
     font-size: 48px;
-    font-weight: 900;
+    font-weight: 600;
     margin-bottom: 20px;
-    text-shadow: 4px 6px 0px rgba(0, 0, 0, 0.2);
+    text-shadow: 4px 6px 0px rgba(0, 0, 0, 0.3);
+    font-weight: 400;
 }
 
 
@@ -242,7 +244,7 @@ a:hover {
     margin: 2%;
     padding: 1.5em;
     border-radius: 20px;
-    color: white;  
+    color: white;
     box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
 }
 
@@ -260,6 +262,7 @@ a:hover {
     font-family: 'Fredoka One', cursive;
     font-weight: 200;
 }
+
 .my_relato_left p {
     font-size: 18px;
 }
@@ -283,6 +286,8 @@ a:hover {
     transition: 1s;
 }
 
+
+
 /* waves */
 .waves {
     background-color: #A7AAB2;
@@ -295,13 +300,14 @@ a:hover {
     padding-bottom: 4%;
 }
 
-.container-carousel h1{
+.container-carousel h1 {
     font-family: 'Fredoka One', cursive;
     text-align: center;
     font-size: 50px;
     text-shadow: 4px 6px 0px rgba(0, 0, 0, 0.2);
     padding-bottom: 0.1%;
     color: white;
+    font-weight: 400;
 }
 
 .container-slider {
@@ -334,7 +340,8 @@ a:hover {
     opacity: 1;
 }
 
-#prev-button, #next-button {
+#prev-button,
+#next-button {
     width: 30px;
     height: 30px;
     border: none;
@@ -342,14 +349,138 @@ a:hover {
     cursor: pointer;
 }
 
-#prev-button img, #next-button img {
-  width: 100%;
-  height: 100%;
+#prev-button img,
+#next-button img {
+    width: 100%;
+    height: 100%;
 }
 
 #prev-button {
     transform: rotate(180deg);
 }
+
+
+
+/* quiz */
+.quiz {
+    padding-top: 3%;
+    padding-bottom: 3%;
+    background-color: #A7AAB2;
+    color: white;
+}
+
+.quiz .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../images/quiz-wallpaper.png);
+    background-size: cover;
+    padding-top: 3%;
+    padding-bottom: 3%;
+    border-radius: 20px;
+}
+
+.quiz .quiz-title h1 {
+    font-family: 'Fredoka One', cursive;
+    font-size: 45px;
+    font-weight: 400;
+    text-align: center;
+}
+
+.redirection {
+    text-align: center;
+    padding-top: 1%;
+    font-size: 20px;
+}
+
+.redirection button {
+    padding: 2% 10%;
+    border-radius: 20px;
+    font-size: 20px;
+    cursor: pointer;
+    background-color: #A7AAB2;
+    font-weight: 900;
+    font-family: 'Fredoka One', cursive;
+    margin-top: 3%;
+    margin-bottom: 2%;
+    border: none;
+    color: black;
+    letter-spacing: 0.1em;
+}
+
+.redirection button:hover {
+    background-color: #CBCCD4;
+}
+
+/* #quiz_title {
+    display: block;
+}
+
+.quizes h1 {
+   font-size: 50px;
+   padding-bottom: 1%;
+}
+
+.quizes p {
+   font-size: 30px;
+   padding-bottom: 0.5%;
+}
+
+.quizes label {
+   font-size: 25px;
+}
+
+.quizes .radios {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 1%;
+    padding-bottom: 1%;
+}
+
+.quizes button {
+    padding: 2% 10%;
+    border-radius: 20px;
+    font-size: 20px;
+    cursor: pointer;
+    background-color: #A7AAB2;
+    font-weight: 900;
+    font-family: 'Fredoka One', cursive;
+    border: none;
+    color: black;
+    letter-spacing: 0.1em;
+}
+
+.rad {
+    margin-left: 30px;
+}
+
+#quiz_a {
+    display: none;
+
+    text-align: center;
+    border: red solid 3px;
+}
+
+#quiz_b {
+    display: none;
+   
+    text-align: center;
+}
+
+#quiz_c {
+    display: none;
+    min-height: 300px;
+    text-align: center;
+}
+
+#quiz_d {
+    display: none;
+    min-height: 300px;
+    text-align: center;
+} */
 
 
 /* footer */
@@ -362,13 +493,14 @@ a:hover {
     align-items: center;
 }
 
-.footer .container h1{
+.footer .container h1 {
     font-family: 'Fredoka One', cursive;
     font-size: 40px;
     text-shadow: 4px 6px 0px rgba(0, 0, 0, 0.2);
+    font-weight: 600;
 }
 
-.footer .container p{
+.footer .container p {
     font-size: 18px;
 }
 
@@ -384,15 +516,3 @@ a:hover {
 
 
 
-.quiz {
-    background-color: #7B7676;
-}
-
-.quiz .container {
-    display: flex;
-    flex-direction: column;
-}
-
-#quiz_a {
-    display: none;
-}

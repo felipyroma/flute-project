@@ -34,25 +34,25 @@
                     <div class="cadastro">
                         <div class="identificador">
                             <div class="identificador-align">
-                                <label for="iptNome"> Nome:</label>
-                                <input class="ipt-cadastro" id="iptNome" type="text" placeholder="Flutebox">
+                                <label for="iptNome"> Nome: </label>
+                                <input class="ipt-cadastro" id="iptNome" type="text" onkeyup="mudar()" placeholder="Flutebox">
                             </div>
 
                             <div class="identificador-align">
-                                <label for="iptEmail" id="labelEmail"> E-mail:</label>
-                                <input class="ipt-cadastro" id="iptEmail" type="email" placeholder="exemplo@email.com">
+                                <label for="iptEmail" id="labelEmail"> E-mail: </label>
+                                <input class="ipt-cadastro" id="iptEmail" type="email" onkeyup="mudar()" placeholder="exemplo@email.com">
                             </div>
                         </div>
 
                         <div class="login">
-                            <label for="iptLogin"> Login:</label>
-                            <input class="ipt-cadastro" id="iptLogin" type="text" placeholder="FluteboxPlay">
+                            <label for="iptLogin"> Login: </label>
+                            <input class="ipt-cadastro" id="iptLogin" type="text" onkeyup="mudar()" placeholder="FluteboxPlay">
 
-                            <label for="iptSenha">Senha:</label>
-                            <input class="ipt-cadastro" id="iptSenha" type="password" placeholder="********">
+                            <label for="iptSenha">Senha: </label>
+                            <input class="ipt-cadastro" id="iptSenha" type="password" onkeyup="mudar()" placeholder="********">
 
                             <label for="iptConfSenha">Confirmar senha:</label>
-                            <input class="ipt-cadastro" id="iptConfSenha" type="password" placeholder="********">
+                            <input class="ipt-cadastro" id="iptConfSenha" type="password" onkeyup="mudar()" placeholder="********">
                         </div>
 
                     </div>
@@ -73,7 +73,6 @@
 </html>
 
 <script>
-    var quantidade = 0
 
     function cadastro() {
         var nome = iptNome.value
@@ -100,7 +99,7 @@
         }
         else if (senha != confSenha) {
             alert('Senhas divergente')
-            senha_ipt.style.border = 'solid 1px red';
+            iptSenha.style.border = 'solid 1px red';
             iptConfSenha.style.border = 'solid 1px red';
         } else {
             if (senha == confSenha) {
@@ -128,10 +127,9 @@
                     console.log("resposta: ", resposta);
 
                     if (resposta.ok) {
-                        mensagem_erro.innerHTML = "Cadastro realizado com sucesso! Redirecionando para tela de Login...";
-
                         setTimeout(function () {
                             window.location = "../login.html";
+
                         }, 1000); // apenas para exibir o loading
 
                         limparFormulario();
@@ -158,10 +156,11 @@
     }
 
     function mudar() {
-        nome_ipt.style.border = '0';
-        login_ipt.style.border = '0';
-        senha_ipt.style.border = '0';
-        confSenha_ipt.style.border = '0';
+        iptNome.style.border = '';
+        iptEmail.style.border = '';
+        iptLogin.style.border = '';
+        iptSenha.style.border = '';
+        iptConfSenha.style.border = '';
     }
 
 

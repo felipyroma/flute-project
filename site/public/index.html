@@ -193,20 +193,103 @@
 
     <div class="quiz">
         <div class="container">
-            <div class="quiz-tittle">
-                <h1>Ficou curioso para saber qual o tipo que mais combina com você?</h1>
+            <div class="quiz-title" id="quiz_title">
+                <h1>Ficou curioso para saber qual tipo de flauta <br> mais combina com você?</h1>
 
-                <h1>Faça login e responda o nosso quiz interativo para descobrir!</h1>
+                <div class="redirection">
+                    <h2>Faça login e responda o nosso quiz interativo para descobrir!</h2>
 
-                <button onclick="logar()"> Logar! </button>
+                    <button onclick="logar()"> LOGAR! </button>
+                </div>
+
             </div>
 
-            <div id="quiz_a">
-                <h1> dujhasduyhsauyh </h1>
-            </div>
+<!-- 
+            <div class="quizes">
+                <div id="quiz_a">
+                    <h1> Questão A </h1>
 
-  
-       
+                    <p> Você se sente confortável estando em posições de destaque? </p>
+
+                    <div class="radios">
+                        <div>
+                            <input type="radio" name="radioA" id="a_sim" checked>
+                            <label for="a_sim"> Sim </label>
+                        </div>
+
+                        <div>
+                            <input type="radio" name="radioA" class="rad" id="a_nao">
+                            <label for="a_sim"> Não </label>
+                        </div>
+                    </div>
+
+                    <button onclick="avançar1()"> Avançar!</button>
+                </div>
+
+                <div id="quiz_b">
+                    <h1> Questão B</h1>
+
+                    <p> Você tem preferência por timbres agudos ou mais graves? </p>
+
+                    <div class="radios">
+                        <div>
+                            <input type="radio" name="radioB" id="b_agudo" checked>
+                            <label for="b_agudo"> Agudos </label>
+                        </div>
+
+                        <div>
+                            <input type="radio" name="radioB" class="rad" id="b_grave">
+                            <label for="b_graves"> Graves </label>
+                        </div>
+                    </div>
+
+                    <button onclick="avançar2()"> Avançar!</button>
+                </div>
+
+                <div id="quiz_c">
+                    <h1> Questão C</h1>
+
+                    <p> Você prefere fazer tarefas sozinho ou em grupo? </p>
+
+                    <div class="radios">
+                        <div>
+                            <input type="radio" name="radioC" id="c_sozinho" checked>
+                            <label for="c_sozinho"> Sozinho </label>
+                        </div>
+
+                        <div>
+                            <input type="radio" name="radioC" class="rad" id="c_grupo">
+                            <label for="c_grupo"> Grupo </label>
+                        </div>
+                    </div>
+
+                    <button onclick="avançar3()"> Avançar!</button>
+                </div>
+
+                <div id="quiz_d">
+                    <h1> Questão D</h1>
+
+                    <p> Quando você está escutando uma música, você foca principalmente na melodia ou costuma apreciar a
+                        harmonia? </p>
+
+                    <div class="radios">
+                        <div>
+                            <input type="radio" name="radioD" id="d_melodia" checked>
+                            <label for="d_melodia"> Melodia </label>
+                        </div>
+
+                        <div>
+                            <input type="radio" name="radioD" class="rad" id="d_harmonia">
+                            <label for="d_harmonia"> Harmonia </label>
+                        </div>
+                    </div>
+
+                    <button onclick="avançar()"> Avançar!</button>
+                </div> -->
+
+
+
+            </div>
         </div>
     </div>
 
@@ -218,7 +301,7 @@
             </p>
 
             <h1>
-               &copy;Flutebox
+                &copy;Flutebox
             </h1>
 
             <div class="contacts">
@@ -236,5 +319,13 @@
 
 </body>
 <script src="js/index.js"></script>
+
+
+<script>
+    function quizz() {
+        quiz_title.style.display = 'none'
+        quiz_a.style.display = 'block'
+    }
+</script>
 
 </html>
