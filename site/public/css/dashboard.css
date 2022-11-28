@@ -1,0 +1,218 @@
+/* navbar */
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Fredoka', sans-serif;
+}
+
+/* navbar */
+.header {
+    background-color: rgba(0, 0, 0, 0.9);
+    padding-bottom: 0.5%;
+    padding-top: 0.5%;
+    width: 100%;
+    z-index: 100000000000000000;
+}
+
+.container {
+    width: 90%;
+    display: flex;
+    align-items: center;
+    margin: auto;
+}
+
+.logo {
+    width: 5.5%;
+}
+
+.navbar {
+    display: flex;
+    justify-content: flex-end;
+    /* border: yellow 3px solid; */
+    width: 94.5%;
+}
+
+.navbar li {
+    list-style-type: none;
+    margin-left: 5%;
+}
+
+li, span {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    font-family: 'Fredoka One', cursive;
+}
+
+
+a:hover {
+    color: #A7AAB2;
+    transition: 0.3s;
+}
+
+
+/* quiz */
+.quiz {
+    min-height: 85vh;
+    background-color: #A7AAB2;
+    color: white;
+    display: flex;
+    justify-content: center;
+    /* border: red 3px solid; */
+    padding-top: 3%;
+    padding-bottom: 3%;
+}
+
+.quiz .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../images/quiz-wallpaper.png);
+    background-size: cover;
+    padding-top: 3%;
+    padding-bottom: 3%;
+    border-radius: 20px;
+    /* border: red solid 3px; */
+}
+
+.quiz .quiz-title h1 {
+    font-family: 'Fredoka One', cursive;
+    font-size: 45px;
+    font-weight: 400;
+    text-align: center;
+}
+
+.quizes h1 {
+    font-size: 50px;
+    padding-bottom: 1%;
+}
+
+.quizes p {
+    font-size: 30px;
+    padding-bottom: 0.5%;
+}
+
+.quizes label {
+    font-size: 25px;
+}
+
+.quizes .radios {
+    /* border: red 3px solid; */
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 1%;
+    padding-bottom: 1%;
+}
+
+.quizes button {
+    padding: 2% 10%;
+    border-radius: 20px;
+    font-size: 20px;
+    cursor: pointer;
+    background-color: #A7AAB2;
+    font-weight: 900;
+    font-family: 'Fredoka One', cursive;
+    border: none;
+    color: black;
+    letter-spacing: 0.1em;
+}
+
+.rad {
+    margin-left: 30px;
+}
+
+.quiz_form {
+    height: 30rem;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.quiz_form:not(:first-child) {
+    display: none;
+}
+
+#quiz_a {
+    display: flex;
+}
+
+
+.resultado_align {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+#res {
+    display: none;
+}
+
+.resultado img {
+    width: 40%;
+    border-radius: 20px;
+}
+
+#soprano {
+    text-align: center;
+    display: none;
+}
+
+#piccolo {
+    text-align: center;
+    display: none;
+}
+
+#alto {
+    text-align: center;
+    display: none;
+}
+
+#tenor {
+    text-align: center;
+    display: none;
+}
+
+#baixo {
+    text-align: center;
+    display: none;
+}
+
+
+/* footer */
+
+.footer .container {
+    padding-top: 1%;
+    padding-bottom: 1%;
+    /* border: solid 3px red; */
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer .container h1 {
+    font-family: 'Fredoka One', cursive;
+    font-size: 40px;
+    text-shadow: 4px 6px 0px rgba(0, 0, 0, 0.2);
+    font-weight: 600;
+}
+
+.footer .container p {
+    font-size: 18px;
+}
+
+.contacts .icons {
+    display: flex;
+    justify-content: center;
+    margin-left: 2%;
+}
+
+.icons a {
+    margin-right: 3%;
+    text-decoration: none;
+    color: black;
+}
+

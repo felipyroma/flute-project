@@ -2,10 +2,12 @@
 const slider = document.querySelectorAll('.slider');
 const btnPrev = document.getElementById('prev-button');
 const btnNext = document.getElementById('next-button');
-// const opt = [];
-// let soprano = 0;
-// let contralto = 0;
-// let baixo = 0;
+const opt = [];
+
+
+let soprano = 0;
+let contralto = 0;
+let baixo = 0;
 
 // const notas = [
 //     {
@@ -71,8 +73,6 @@ function logar() {
   window.location = "./login.html"
 }
 
-
-
 function avançar1() {
   let sim = document.getElementById('a_sim')
   let nao = document.getElementById('a_nao')
@@ -82,7 +82,7 @@ function avançar1() {
     quiz_b.style.display = 'flex'
   }
 
-
+  opt.push({ questao: 'a', escolha: sim.checked })
 }
 
 function avançar2() {
@@ -93,7 +93,7 @@ function avançar2() {
     quiz_b.style.display = 'none'
     quiz_c.style.display = 'flex'
   }
-
+  opt.push({ questao: 'b', escolha: agudo.checked })
 }
 
 function avançar3() {
@@ -105,6 +105,7 @@ function avançar3() {
     quiz_d.style.display = 'flex'
   }
 
+  opt.push({ questao: 'c', escolha: sozinho.checked })
 }
 
 function concluir() {
@@ -116,19 +117,34 @@ function concluir() {
     res.style.display = 'flex'
   }
 
+  opt.push({ questao: 'd', escolha: melodia.checked })
 }
 
-// opt.push({ questao: 'd', escolha: melodia.checked })
+
+// function concluir() {
+//   for (let i = 0; i < opt.length; i++) {
+//     const option = array[index];
+//   }
+
+//   if(opt == '')
+// }
+
+
+
+
 
 // function concluir() {
 //   document.getElementById('resul').innerHTML = ''
-//   opt.forEach(opcao => {
-//     document.getElementById('resul').innerHTML += `
-//       <h5>${opcao.questao}</h5>
-//       <p>${opcao.escolha}</p>
-//       <br>
-//     `
-//   })
 
+//   for (let index = 0; index < opt.length; index++) {
+//     const opcao = opt[index];
+//     notaquestao =  notas[index][opcao.escolha]
 
+//     for (let i = 0; i < notaquestao.length; i++) {
+//     if(i ==0) {
+
+//     }
+      
+//     }
+//   }
 // }
