@@ -37,7 +37,7 @@
     margin-left: 5%;
 }
 
-li, span {
+li, span, a {
     text-decoration: none;
     color: white;
     font-size: 20px;
@@ -54,10 +54,10 @@ a:hover {
 /* quiz */
 .quiz {
     min-height: 85vh;
-    background-color: #A7AAB2;
     color: white;
     display: flex;
     justify-content: center;
+    background-color: #A7AAB2;
     /* border: red 3px solid; */
     padding-top: 3%;
     padding-bottom: 3%;
@@ -68,7 +68,7 @@ a:hover {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-image: url(../images/quiz-wallpaper.png);
+    background-color: #767881;
     background-size: cover;
     padding-top: 3%;
     padding-bottom: 3%;
@@ -125,7 +125,7 @@ a:hover {
 }
 
 .quiz_form {
-    height: 30rem;
+    height: 15rem;
     text-align: center;
     justify-content: center;
     align-items: center;
@@ -151,34 +151,112 @@ a:hover {
     display: none;
 }
 
-.resultado img {
+.resultado {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#soprano {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#soprano img {
+    align-self: center;
     width: 40%;
     border-radius: 20px;
 }
 
-#soprano {
-    text-align: center;
+#sopranino {
     display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
 }
 
-#piccolo {
-    text-align: center;
-    display: none;
+#sopranino img{
+    align-self: center;
+    width: 40%;
+    border-radius: 20px;
 }
 
 #alto {
-    text-align: center;
     display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#alto img{
+    align-self: center;
+    width: 40%;
+    border-radius: 20px;
 }
 
 #tenor {
-    text-align: center;
     display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#tenor img {
+    align-self: center;
+    width: 40%;
+    border-radius: 20px;
 }
 
 #baixo {
-    text-align: center;
     display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#baixo img {
+    align-self: center;
+    width: 40%;
+    border-radius: 20px;
+}
+
+.analytics {
+    padding-top: 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#grafico {
+    display: none;
+    flex-direction: column;
+    text-align: center;
+    color: white;
+    width: 80%;
+    background-color: #767881;
+    padding: 3%;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+#btn_recomeco {
+    padding: 1.5% 6%;
+    border-radius: 20px;
+    font-size: 20px;
+    cursor: pointer;
+    background-color: #A7AAB2;
+    font-weight: 900;
+    font-family: 'Fredoka One', cursive;
+    border: none;
+    color: black;
+    letter-spacing: 0.1em;
+    display: none;
+    margin-top: 5%;
 }
 
 

@@ -20,11 +20,12 @@ create table flauta (
 );
 
 create table usuarioFlauta (
+	id int auto_increment,
 	fkUsuario int,
 		foreign key (fkUsuario) references usuario(id),
     fkFlauta int,
 		foreign key (fkFlauta) references flauta(id),
-    primary key (fkUsuario, fkFlauta)
+    primary key (id, fkUsuario, fkFlauta)
 );
 
 
@@ -50,20 +51,20 @@ insert into flauta values
     
 -- inserindo dados na tabela usuarioFlauta
 insert into usuarioFlauta values
-	(2, 1),
-	(1, 3),
-	(3, 1),
-	(1, 1),
-	(1, 4),
-	(2, 5),
-	(3, 2),
-	(6, 1),
-	(4, 2),
-	(6, 5),
-	(1, 2),
-	(7, 4),
-	(7, 1),
-	(4, 1);
+(null, 2, 1),
+(null, 1, 3),
+(null, 3, 1),
+(null, 1, 1),
+(null, 1, 4),
+(null, 2, 5),
+(null, 3, 2),
+(null, 6, 1),
+(null, 4, 2),
+(null, 6, 5),
+(null, 1, 2),
+(null, 7, 4),
+(null, 7, 1),
+(null, 4, 1);
 
 
 -- select de todos os dados das tabelas
@@ -96,10 +97,14 @@ select u.nome 'Nome do usuário',
 select count(fkFlauta) 'Quantidade de Flautas'
 	from usuarioFlauta;
     
--- contagem dos usuarios que possuem a flauta do tipo soprano
-select count(fkFlauta) 'Quantidade de Flautas'
-	from usuarioFlauta
-    where fkFlauta = 1;
+
+select f.tipo Tipo,
+	   count(uf.fkFlauta) Quantidade
+       from flauta f
+			join usuarioFlauta uf
+				on f.id = uf.fkFlauta
+			group by f.id;
+
 
 
 

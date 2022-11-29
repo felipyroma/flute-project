@@ -1,4 +1,4 @@
-var flautaModel = require("../models/flautaModel");
+var fluteModel = require("../models/fluteModel");
 
 function testar(req, res) {
     console.log("ENTRAMOS NO avisoController");
@@ -6,7 +6,23 @@ function testar(req, res) {
 }
 
 function buscarFlautas(req, res) {
-    flautaModel.listar().then(function (resultado) {
+    fluteModel.listar().then(function (resultado) {
+        if (resultado.length > 0) {
+            res.status(200).json(resultado);
+        } else {
+            res.status(204).send("Nenhum resultado encontrado!")
+        }
+    }).catch(function (erro) {
+        console.log(erro);
+        console.log("Houve um erro ao buscar os avisos: ", erro.sqlMessage);
+        res.status(500).json(erro.sqlMessage);
+    });
+}
+
+function cadastrarFlautas(req, res) {
+    var usuario = req.body.idusuarioServer
+    var flauta = req.body.fkflautaServer
+    fluteModel.cadastrar(usuario, flauta).then(function (resultado) {
         if (resultado.length > 0) {
             res.status(200).json(resultado);
         } else {
@@ -22,4 +38,5 @@ function buscarFlautas(req, res) {
 module.exports = {
     testar,
     buscarFlautas,
+    cadastrarFlautas,
 }
